@@ -1,0 +1,34 @@
+<div class="card-container">
+    The creation of this program is an idea of a friend (I hope he is my friend)
+    who often solves riddles with letters. This program generates all possible
+    combinations of certain letters without repeating them. For example, ABC will generate:
+</div>
+<div class="card-container">
+  <div class="card card-small" tabindex="0">ACB</div>
+  <div class="card card-small" tabindex="0">BAC</div>
+  <div class="card card-small" tabindex="0">BCA</div>
+  <div class="card card-small" tabindex="0">CBA</div>
+  <div class="card card-small" tabindex="0">CAB</div>
+  <div class="card card-small" tabindex="0">BC</div>
+  <div class="card card-small" tabindex="0">CB</div>
+  <div class="card card-small" tabindex="0">C</div>
+</div>
+<div class="card-container">
+  How to use it? Just write the letters in the textarea bellow and click
+  on &quot;generate permutations&quot; button.
+</div>
+<div class="card-container">
+  <div class="card card-small" tabindex="0">
+  <textarea #inputString></textarea>
+  </div>
+  <div class="card card-small" tabindex="0">
+    <button (click)="generatePermutations(inputString.value);">
+      Generate permutations
+    </button>
+  </div>
+</div>
+<div class="card-container">
+  <div *ngFor="let permutation of permutations" class="card card-small" tabindex="0">
+    {{permutation}}
+  </div>
+</div>
